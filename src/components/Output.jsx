@@ -10,6 +10,7 @@ const Output = ({editorRef,language}) => {
 
     const runCode = async() => {
         setOutput('')
+        setIsError(false)
         setIsloading(true)
 
         const codeToCompile = editorRef.current.getValue();
@@ -41,7 +42,7 @@ const Output = ({editorRef,language}) => {
             onClick={runCode}
             className="px-3 py-1.5 border-2 border-lime-300 rounded-md mb-2 bg-transparent"
             >Run Code</button>
-            <div className={`h-[80vh] p-2 border rounded-md ${isError ? "text-red-500 border-red-500" : "text-gray-300 border-[#333]"} bg-gray-950`}>
+            <div className={`min-h-[25vh] md:min-h-[80vh] p-2 border rounded-md ${isError ? "text-red-500 border-red-500" : "text-gray-300 border-[#646464]"} bg-gray-950`}>
                 {output ? 
                 output.map((line,index) => <p key={index}>{line}</p>) : 
                 (isLoading ? 'Running your code...' : `Click "Run Code" to see output here`)}

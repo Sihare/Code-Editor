@@ -21,11 +21,11 @@ const CodeEditor = () => {
     }
 
     return (
-        <div className="flex gap-2">
-            <div className="w-1/2">
+        <div className="flex flex-col md:flex-row gap-2">
+            <div className="w-full md:w-2/3 h-3/4 md:h-full">
                 <LanguageSelector language={language} onSelect={onSelect}/>
                 <Editor
-                    height="80vh"
+                    className="h-[50vh] md:h-[80vh]"
                     theme="vs-dark"
                     language={language}
                     defaultValue={`${CODE_SNIPPETS[language]}`}
@@ -34,7 +34,7 @@ const CodeEditor = () => {
                     onChange={(val) => setValue(val)}
                 />
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/3 h-1/4 md:h-full">
                 <Output editorRef={editorRef} language={language}/>
             </div>  
         </div>
