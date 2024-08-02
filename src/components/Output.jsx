@@ -23,7 +23,7 @@ const Output = ({editorRef,language}) => {
                     {
                     "content": codeToCompile,
                     }
-                ],
+                ], 
             })
             setOutput(res.data.run.output.split("\n"))
             res.data.run.stderr && setIsError(true) 

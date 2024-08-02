@@ -38,7 +38,7 @@ const CodeEditor = () => {
                 <Output editorRef={editorRef} language={language}/>
             </div>  
         </div>
-    );
+    ); 
 };
 
 export default CodeEditor;

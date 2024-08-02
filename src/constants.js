@@ -14,4 +14,4 @@ export const CODE_SNIPPETS = {
     typescript: `type Params = {\n\tname: string;\n}\n\nfunction greet(data: Params) {\n\tconsole.log("Hello, " + data.name + "!");\n}\n\ngreet({ name: "TypeScript" });\n`,
 }
 
-export const baseUrl = 'https://emkc.org/api/v2/piston/execute'
+export const baseUrl = 'https://emkc.org/api/v2/piston/execute' 
